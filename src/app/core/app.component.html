@@ -2,7 +2,7 @@
 <div class="site">
 	<div class="site-content">
 		<div class="container">
-			<nav class="navbar navbar-expand">
+			<nav class="navbar navbar-expand navbar-dark">
 				  <div class="navbar-nav">
 					<a class="nav-item nav-link" [routerLink]="['/home']" routerLinkActive="active"><i class="d-none d-sm-inline-block fab fa-fort-awesome-alt mx-1"></i>Home</a>
 					<a class="nav-item nav-link" [routerLink]="['/portfolio']" routerLinkActive="active"><i class="d-none d-sm-inline-block fas fa-laptop-code mx-1"></i>Portfolio</a>
@@ -17,9 +17,27 @@
 			</div>
 		</div>
 		<main class="container">
-
 			<router-outlet></router-outlet>
 		</main>
 	</div>
-	<footer></footer>
+	<footer class="footer container">
+		<div class="row">
+			<div class="col-12 col-sm-6"><p>
+				&copy; Copyright 2020 Javier Carrion
+			</p></div>
+			<div class="col-12 col-sm-6">
+				<ul class="social-icons float-right mt-3">
+					<li>
+						<a class="fab fa-linkedin"></a>
+					</li>
+					<li>
+						<a class="fab fa-twitter-square"></a>
+					</li>
+					<li>
+						<a class="fab fa-github-square"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</footer>
 </div>
