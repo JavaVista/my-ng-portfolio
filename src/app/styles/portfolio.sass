@@ -11,6 +11,9 @@ body
 	/* Take as much space to keep footer below */
 	flex: 1
 
+.main-content
+	margin-top: -40px
+
 .header
 	/* Photo by Martin Shreder on Unsplash */
 	background: url('./assets/images/martin-shreder-5Xwaj9gaR0g-unsplash.jpg') no-repeat
@@ -35,4 +38,28 @@ body
 
 		&:hover:not(active)
 			color: rgba($alt-color, 0.50)
+
+.footer
+	position: relative
+	bottom: 1.25rem
+	color: $alt-color
+	border-top: 3px solid $accent
+	background-color: $alt-bg
+
+	p
+		padding-top: 1.25rem
+
+	.social-icons
+		li
+			display: inline-block
+			list-style: none
+
+			a
+				padding: 0.75rem 1rem
+				text-align: center
+				transition: color 0.2s ease-in
+
+			&:hover
+				color: $accent
+				cursor: pointer
 
