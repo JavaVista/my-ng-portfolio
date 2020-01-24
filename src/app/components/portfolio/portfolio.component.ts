@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortfolioComponent implements OnInit {
 
+  selectedType: 'all' | 'angular' | 'react' | 'flutter' = 'all';
+
   constructor() { }
 
   ngOnInit() {
