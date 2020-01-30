@@ -11,6 +11,8 @@ export class PortfolioComponent implements OnInit {
 
   selectedType: 'all' | 'angular' | 'react' | 'flutter' = 'all';
 
+  rooms = ['Room 1', 'Room 2', 'Living Room', 'Bathroom'];
+
   portfolios: Portfolio[];
 
   constructor(private portfolioSvc: PortfolioService) { }

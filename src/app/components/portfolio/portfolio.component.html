@@ -16,6 +16,20 @@
 	</div>
 </mat-card>
 <mat-divider class="my-3"></mat-divider>
-<div>
-	{{portfolios | json}}
+<div class="row">
+	<div class="col-3" *ngFor="let item of portfolios">
+		<mat-card>
+			<mat-card-header>
+			  <div mat-card-avatar></div>
+			  <mat-card-title>{{item.name}}</mat-card-title>
+			</mat-card-header>
+			<img mat-card-image [src]="item.preview" [alt]="item.name">
+			<mat-card-content>
+				{{item.description}}
+			</mat-card-content>
+			<mat-card-actions>
+			  <button mat-button>Visit</button>
+			</mat-card-actions>
+		  </mat-card>
+	</div>
 </div>
