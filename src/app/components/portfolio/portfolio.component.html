@@ -11,19 +11,26 @@
 		<mat-radio-button class="mx-2" value="react">React</mat-radio-button>
 		<mat-radio-button class="mx-2" value="flutter">Flutter</mat-radio-button>
 	</mat-radio-group>
-	<div>
+<!-- 	<div>
 		{{selectedType}}
-	</div>
+	</div> -->
 </mat-card>
 <mat-divider class="my-3"></mat-divider>
-<div class="row">
-	<div class="col-3" *ngFor="let item of portfolios">
+<div class="row mb-5">
+	<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3" *ngFor="let item of portfolios">
 		<mat-card>
 			<mat-card-header>
-			  <div mat-card-avatar></div>
+			  <div mat-card-avatar>
+				  <ng-container [ngSwitch]="item.type">
+					  <i class="fab fa-angular fa-2x angular-color" *ngSwitchCase="'Angular'"></i>
+					  <i class="fab fa-react fa-2x react-color" *ngSwitchCase="'React'"></i>
+					  <i class="fas fa-code fa-2x flutter-color" *ngSwitchCase="'Flutter'"></i>
+					  <i class="fas fa-code-branch fa-2x accent-color"  *ngSwitchDefault></i>
+				  </ng-container>
+			  </div>
 			  <mat-card-title>{{item.name}}</mat-card-title>
 			</mat-card-header>
-			<img mat-card-image [src]="item.preview" [alt]="item.name">
+			<img mat-card-image [src]="item.preview + '?text=' + item.name" [alt]="item.name">
 			<mat-card-content>
 				{{item.description}}
 			</mat-card-content>
