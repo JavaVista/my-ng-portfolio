@@ -9,7 +9,22 @@ import { Portfolio } from 'src/app/services/portfolio.model';
 })
 export class PortfolioComponent implements OnInit {
 
-  selectedType: 'all' | 'angular' | 'react' | 'flutter' = 'all';
+ // tslint:disable-next-line: variable-name
+ private _selectedType: 'all' | 'Angular' | 'React' | 'Flutter' = 'all';
+
+
+ get selectedType() {
+    return this._selectedType;
+ }
+
+
+ set selectedType(newValue: 'all' | 'Angular' | 'React' | 'Flutter') {
+    if (newValue !== this._selectedType) {
+        this._selectedType = newValue;
+        this.loadPortfolios(this._selectedType);
+    }
+ }
+
 
   rooms = ['Room 1', 'Room 2', 'Living Room', 'Bathroom'];
 
@@ -18,9 +33,13 @@ export class PortfolioComponent implements OnInit {
   constructor(private portfolioSvc: PortfolioService) { }
 
   ngOnInit() {
-        this.portfolioSvc.get().subscribe(data => {
-            this.portfolios = data;
-       });
+        this.loadPortfolios(this._selectedType);
+  }
+
+  loadPortfolios(selectedType: string): void {
+    this.portfolioSvc.get().subscribe(data => {
+         this.portfolios = data.filter(p => p.type === selectedType || selectedType === 'all');
+   });
   }
 
 }
