@@ -44,7 +44,7 @@
 	"id": 8,
 	"name": "Zamit",
 	"description": "in faucibus orci luctus et ultrices posuere cubilia curae nulla",
-	"type": "Flutter",
+	"type": "React",
 	"preview": "https://fakeimg.pl/650x450/000000/"
   }, {
 	"id": 9,
@@ -56,7 +56,7 @@
 	"id": 10,
 	"name": "Sonair",
 	"description": "pede venenatis non sodales sed tincidunt eu felis fusce posuere",
-	"type": "Angular",
+	"type": "React Native",
 	"preview": "https://fakeimg.pl/650x450/000000/"
   }, {
 	"id": 11,
@@ -68,6 +68,6 @@
 	"id": 12,
 	"name": "Fintone",
 	"description": "primis in faucibus orci luctus et ultrices posuere cubilia curae",
-	"type": "Angular",
+	"type": "EmberJS",
 	"preview": "https://fakeimg.pl/650x450/000000/"
   }]

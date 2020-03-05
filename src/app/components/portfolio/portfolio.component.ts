@@ -9,8 +9,10 @@ import { Portfolio } from 'src/app/services/portfolio.model';
 })
 export class PortfolioComponent implements OnInit {
 
+types: string[];
+
  // tslint:disable-next-line: variable-name
- private _selectedType: 'all' | 'Angular' | 'React' | 'Flutter' = 'all';
+ private _selectedType = 'all';
 
 
  get selectedType() {
@@ -18,7 +20,7 @@ export class PortfolioComponent implements OnInit {
  }
 
 
- set selectedType(newValue: 'all' | 'Angular' | 'React' | 'Flutter') {
+ set selectedType(newValue: string) {
     if (newValue !== this._selectedType) {
         this._selectedType = newValue;
         this.loadPortfolios(this._selectedType);
@@ -38,7 +40,8 @@ export class PortfolioComponent implements OnInit {
 
   loadPortfolios(selectedType: string): void {
     this.portfolioSvc.get().subscribe(data => {
-         this.portfolios = data.filter(p => p.type === selectedType || selectedType === 'all');
+        this.types = data.map(p => p.type).filter((value, index, self) => self.indexOf(value) === index);
+        this.portfolios = data.filter(p => p.type === selectedType || selectedType === 'all');
    });
   }
 
