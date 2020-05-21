@@ -1,22 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { Portfolio } from 'src/app/services/portfolio.model';
-import { PortfolioService } from 'src/app/services/portfolio.service';
+import { Component, OnInit } from "@angular/core";
+import { Portfolio } from "src/app/services/portfolio.model";
+import { PortfolioService } from "src/app/services/portfolio.service";
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.sass']
+	selector: "app-home",
+	templateUrl: "./home.component.html",
+	styleUrls: ["./home.component.sass"],
 })
 export class HomeComponent implements OnInit {
+	recentProjects: Portfolio[];
 
-    recentProjects: Portfolio[];
+	constructor(private portfolioSvc: PortfolioService) {}
 
-  constructor(private portfolioSvc: PortfolioService) { }
-
-  ngOnInit() {
-        this.portfolioSvc.get().subscribe(data => {
-            this.recentProjects = data.splice(0, 7);
-        })
-  }
-
+	ngOnInit() {
+		this.portfolioSvc.get().subscribe((data) => {
+			this.recentProjects = data.splice(0, 7);
+		});
+	}
 }

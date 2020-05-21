@@ -168,7 +168,7 @@
 		</div>
 	</div>
 	<div class="row no-gutters">
-		<div *ngFor="let item of recentProjects;index as i" 
+		<div *ngFor="let item of recentProjects;index as i"
 				[ngClass]="{'col-12 col-sm-4 col-md-4': i < 3, 'col-12 col-sm-6 col-md-3': i >= 3}">
 			<img class="img-fluid"
 				[src]="item.preview + '?text=' + item.name"
@@ -210,7 +210,8 @@
 				src="https://fakeimg.pl/650x450/000000/?text=app7"
 				alt="app7"
 			/>
-		</div>
-		<div class="col-12 mt-3"><button mat-stroked-button>View more</button></div> -->
+		</div>-->
+		<div class="col-12 mt-3">
+			<button [routerLink]="['/portfolio']" mat-stroked-button>View more</button></div>
 	</div>
 </div>
