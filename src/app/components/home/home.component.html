@@ -105,7 +105,7 @@
 			molestiae culpa expedita beatae! Quo officiis illum pariatur
 			laboriosam dignissimos optio ad.
 		</p>
-		<button mat-stroked-button>View more</button>
+		<button [routerLink]="['/portfolio']" [queryParams]="{filter:'Angular'}" mat-stroked-button>View more</button>
 	</div>
 </div>
 
@@ -125,7 +125,7 @@
 			eius facilis necessitatibus. Delectus velit quidem quasi eaque
 			quaerat praesentium omnis.
 		</p>
-		<button mat-stroked-button>View more</button>
+		<button [routerLink]="['/portfolio']" [queryParams]="{filter:'React'}" mat-stroked-button>View more</button>
 	</div>
 	<div class="col-3 text-center">
 		<i class="fab fa-react fa-10x react-color d-none d-md-block"></i>
@@ -152,7 +152,7 @@
 			aperiam praesentium! Voluptatum sit a aspernatur quibusdam, adipisci
 			at magnam eius.
 		</p>
-		<button mat-stroked-button>View more</button>
+		<button [routerLink]="['/portfolio']" [queryParams]="{filter:'Flutter'}"  mat-stroked-button>View more</button>
 	</div>
 </div>
 
@@ -175,42 +175,6 @@
 				[alt]="item.name"
 			/>
 		</div>
-		<!-- <div class="col-12 col-sm-4 col-md-4">
-			<img class="img-fluid"
-				src="https://fakeimg.pl/650x450/000000/?text=app2"
-				alt="app2"
-			/>
-		</div>
-		<div class="col-12 col-sm-4 col-md-4">
-			<img class="img-fluid"
-				src="https://fakeimg.pl/650x450/000000/?text=app3"
-				alt="app3"
-			/>
-		</div>
-		<div class="col-12 col-sm-6 col-md-3">
-			<img class="img-fluid"
-				src="https://fakeimg.pl/650x450/000000/?text=app4"
-				alt="app4"
-			/>
-		</div>
-		<div class="col-12 col-sm-6 col-md-3">
-			<img class="img-fluid"
-				src="https://fakeimg.pl/650x450/000000/?text=app5"
-				alt="app5"
-			/>
-		</div>
-		<div class="col-12 col-sm-6 col-md-3">
-			<img class="img-fluid"
-				src="https://fakeimg.pl/650x450/000000/?text=app6"
-				alt="app6"
-			/>
-		</div>
-		<div class="col-12 col-sm-6 col-md-3">
-			<img class="img-fluid"
-				src="https://fakeimg.pl/650x450/000000/?text=app7"
-				alt="app7"
-			/>
-		</div>-->
 		<div class="col-12 mt-3">
 			<button [routerLink]="['/portfolio']" mat-stroked-button>View more</button></div>
 	</div>
