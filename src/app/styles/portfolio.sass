@@ -2,6 +2,9 @@ body
 	font-family: 'IBM Plex Sans', sans-serif
 	font-weight: 400
 
+a
+	color: $accent
+
 .site
 	display: flex
 	flex-direction: column
@@ -86,4 +89,17 @@ body
 .filter-card
 	.mat-card-header-text
 		margin: 0rem
+
+.mat-form-field-empty.mat-form-field-label
+	color: $accent
+
+.mat-placeholder-required.mat-form-field-required-marker
+	color: $alt-color
+
+.mat-form-field.mat-focused .mat-form-field-label
+	color: $alt-color
+
+.mat-focused .mat-form-field-underline .mat-form-field-ripple
+	background-color: $accent
+
 
